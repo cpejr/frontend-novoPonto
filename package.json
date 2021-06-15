@@ -9,10 +9,16 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "antd": "^4.15.2",
+    "antd-theme-generator": "^1.2.8",
+    "babel-plugin-import": "^1.13.3",
+    "customize-cra": "^1.0.0",
     "dotenv": "^8.2.0",
     "graphql": "^15.5.0",
-    "less": "^4.1.1",
+    "less": "2.7.1",
+    "less-loader": "5.0.0",
     "react": "^17.0.1",
+    "react-app-rewire-antd-theme": "^1.1.4",
+    "react-app-rewired": "^2.1.8",
     "react-dom": "^17.0.1",
     "react-google-login": "^5.2.2",
     "react-lottie": "^1.2.3",
@@ -24,7 +30,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-app-rewired start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

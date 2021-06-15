@@ -1,8 +1,26 @@
+import path from "path";
 import { createGlobalStyle } from "styled-components";
+import { generateTheme } from "antd-theme-generator";
 
 // Tema do ant design
 if (true) require("./compiled/antdDark.css");
 else require("./compiled/antdLight.css");
+
+const options = {
+  antDir: path.join(__dirname, "./node_modules/antd"),
+  stylesDir: path.join(__dirname, "./src"), // all files with .less extension will be processed
+  varFile: path.join(__dirname, "./src/styles/mainDark.less"), // default path is Ant Design default.less file
+  themeVariables: ["@primary-color"],
+  outputFilePath: path.join(__dirname, "./public/color.less"), // if provided, file will be created with generated less/styles
+};
+
+generateTheme(options)
+  .then((less) => {
+    console.log("Theme generated successfully", less);
+  })
+  .catch((error) => {
+    console.log("Error", error);
+  });
 
 const GlobalStyle = createGlobalStyle`
  * {
