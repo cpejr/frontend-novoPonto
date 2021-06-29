@@ -6,7 +6,7 @@ import { Skeleton } from "antd";
 import { SessionContext } from "../../context/SessionProvider";
 
 const CLIENT_ID =
-  `${process.env.REACT_APP_CLIENT_ID}` ||
+  process.env.REACT_APP_CLIENT_ID ||
   "927681508740-6avqgv44im25umcj7ji2856o84fcrhje.apps.googleusercontent.com";
 
 const Login = () => {

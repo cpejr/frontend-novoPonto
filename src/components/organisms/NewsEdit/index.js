@@ -78,10 +78,6 @@ const NewsEdit = ({
               const result = await sendImage({
                 variables: { file: file, newsId: news.newsId },
               });
-              console.log(
-                "🚀 ~ file: index.js ~ line 81 ~ uploadCallback: ~ result",
-                result
-              );
               return { data: { link: result.data.uploadImage } };
             },
             inputAccept: "image/gif,image/jpeg,image/jpg,image/png,image/svg",
